@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: wheat;
+   }
+   .item1 {grid-area: header;}
+   .item2 {grid-area: menu;}
+   .item3 {grid-area: main;}
+   .item4 {grid-area: right;
+   }
+   .item5 {grid-area: footer;}
+   
+   .grid-container {
+       display: grid;
+       grid-template-areas: 
+       'header header header header header header'
+       'menu main main main right right'
+       'footer footer footer footer footer footer'
+       ;
+       grid-template-rows: auto 1fr auto;
+       gap: 1px;
+       background-color: silver;
+       padding: 10px;
+       height: 100vh;
+   
+   }
+   .grid-container > div {
+       background-color: rgba(255, 255, 255, 0.8);
+       text-align: center;
+       padding: 20px 0;
+       font-size: 14px;
+   }
+   /* Top Menu */
+   .top-menu ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: space-around;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       background-color: wheat;
+   }
+   .top-menu ul li a {
+       color: rgb(0, 0, 0);
+       text-decoration: none;
+       font-size: 12px;
+       padding: 10px;
+   }
+   .top-menu ul li a:hover {
+       text-decoration: underline;
+       color: rgb(149, 11, 6);
+   }
+   /*Side Menu*/
+   .item2 {
+       height: 100%;
+   }
+   .side-menu ul{
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       background-color: blanchedalmond;
+       height: 100%;
+   }
+   .side-menu ul li a {
+       color: black;
+       text-decoration: none;
+       font-size: 20px;
+       display: block;
+       padding: 5 5 5 5 ;
+   }
+   .side-menu ul li a:hover{
+       text-decoration: underline;
+       font-weight: 800;
+   }
+   /*Footer*/
+   .footer-links {
+       display: flex;
+       justify-content: space-around;
+       margin: 20px;
+   }
+   .footer-links .footer-column {
+       width: 20%;
+   }
+   .footer-links .footer-column h6 {
+       border-bottom: 2px solid white;
+       padding-bottom: 10px;
+   }
+   .footer-links .footer-column ul {
+       list-style-type: none;
+       padding: 0;
+   
+   }
+   .footer-column ul li a {
+       color: rgb(0, 0, 0);
+       text-decoration: none;
+       justify-content: space-around;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   }
+   .item5 {
+       background-color: tan;
+   }
+   
