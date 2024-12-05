@@ -1,6 +1,6 @@
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: wheat;
+    font-family: 'helvetica';
    }
    .item1 {grid-area: header;}
    .item2 {grid-area: menu;}
@@ -18,13 +18,12 @@ body {
        ;
        grid-template-rows: auto 1fr auto;
        gap: 1px;
-       background-color: silver;
        padding: 10px;
        height: 100vh;
    
    }
    .grid-container > div {
-       background-color: rgba(255, 255, 255, 0.8);
+       background-color: #c5cac8;
        text-align: center;
        padding: 20px 0;
        font-size: 14px;
@@ -37,51 +36,56 @@ body {
        display: flex;
        justify-content: space-around;
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-       background-color: wheat;
+       background-color: none;
    }
    .top-menu ul li a {
        color: rgb(0, 0, 0);
        text-decoration: none;
-       font-size: 12px;
+       font-size: 40px;
        padding: 10px;
    }
    .top-menu ul li a:hover {
        text-decoration: underline;
        color: rgb(149, 11, 6);
    }
-   /*Side Menu*/
+   /*left Menu*/
    .item2 {
        height: 100%;
+       margin: 1px 1px 1px 1px;
+       padding: 10px 2px 2px 10px;
    }
-   .side-menu ul{
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-       background-color: blanchedalmond;
-       height: 100%;
+   .side-menu {
+    outline: 1px;
+    outline-color: black;
    }
-   .side-menu ul li a {
-       color: black;
-       text-decoration: none;
-       font-size: 20px;
-       display: block;
-       padding: 5 5 5 5 ;
-   }
-   .side-menu ul li a:hover{
-       text-decoration: underline;
-       font-weight: 800;
+   /*Center Menu*/
+   .item3 {
+    padding: 15px 10px 10px 15px;
+    margin: 1px 1px 1px 1px;
+}
+   
+    /*Right Menu*/
+   .right-menu {
+    list-style: none;
+    list-style-type: none;
+    padding: 10px 10px 10px 10px;
+    margin: 1px 1px 1px 1px;
+    box-shadow: rgba(0, 0, 0, .5);
+    justify-content: space-around;
+    display: flex;
    }
    /*Footer*/
    .footer-links {
        display: flex;
-       justify-content: space-around;
-       margin: 20px;
+       justify-content: center;
+       margin: 0;
+       padding: 0;
    }
    .footer-links .footer-column {
-       width: 20%;
+       width: 60%;
    }
    .footer-links .footer-column h6 {
-       border-bottom: 2px solid white;
+       border-bottom: 2px solid #46748a;
        padding-bottom: 10px;
    }
    .footer-links .footer-column ul {
@@ -92,10 +96,81 @@ body {
    .footer-column ul li a {
        color: rgb(0, 0, 0);
        text-decoration: none;
-       justify-content: space-around;
+       justify-content: center;
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    }
+   
    .item5 {
        background-color: tan;
+       margin: 1px 1px 1px 1px;
    }
+   /*text*/
+   h4 h5 h6 {
+    font-size: 20px;
+    justify-content: center;
+    font-size: large;
+    color:#98c2d6;
+}
+    p {
+        word-spacing: 4px;
+        border-spacing: 3px;
+    }
    
+   /*lists*/
+   ul li {
+    list-style-type: none;
+    justify-content: left;
+    list-style: none;
+    display: flex;
+   }
+   /*Contact*/
+   .form {
+    justify-content: left;
+    text-align: left;
+   }
+   /*Animation*/
+  @keyframes bgcolor {
+    0% {
+        background-color: #98c2d6
+    }
+
+    30% {
+        background-color: #46748a
+    }
+
+    60% {
+        background-color: #d5ba98
+    }
+
+    90% {
+        background-color: #ffe9cf
+    }
+
+    100% {
+        background-color: #98c2d6
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 10s infinite;
+    animation: bgcolor 50s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+/*web table*/
+    table {
+        outline-color: silver;
+        font-size: medium;
+        font-size: 15px;
+        text-align: left;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        padding: 15px 15px 15px 15px;
+        margin: 2px 2px 2px 2px;
+    }
+
+/*Webpage Scaling*/
+@media screen and (max-width: 800px) {
+    .item2 .item3 .item4 {
+      width: 100%; 
+    }}
